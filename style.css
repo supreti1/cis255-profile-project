@@ -2,10 +2,11 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background: #f4f4f4;
 }
 
 header {
-  background-color: #1f3a93;
+  background-color: #222;
   color: white;
   padding: 20px;
   text-align: center;
@@ -19,44 +20,54 @@ header {
 }
 
 .profile-info, .media-gallery {
-  border: 1px solid #ccc;
+  background: white;
   padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 .feedback {
   padding: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin: 20px;
+  border-radius: 8px;
 }
 
 table {
-  border-collapse: collapse;
   width: 100%;
+  border-collapse: collapse;
 }
 
 th, td {
   border: 1px solid #999;
   padding: 8px;
+  text-align: left;
 }
 
-tr:hover {
-  background-color: #f2f2f2;
+caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-form {
-  border: 1px solid #ccc;
-  padding: 15px;
-  background: #f9f9f9;
-}
-
-fieldset {
+form fieldset {
   margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
 }
 
 button {
-  background-color: #1f3a93;
+  background-color: #222;
   color: white;
+  padding: 10px 15px;
   border: none;
-  padding: 10px;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
 }
 
 @media (max-width: 600px) {

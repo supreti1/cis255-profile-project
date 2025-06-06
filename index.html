@@ -23,8 +23,8 @@
           <tr><td>Name:</td><td>Saksham Upreti</td></tr>
           <tr><td>Birthday:</td><td>April 28, 2003</td></tr>
           <tr><td>Favorite Color:</td><td>Black and Brown</td></tr>
-         <tr><td>Favorite Quote:</td><td>"Strive for progress, not perfection."</td></tr>
-            <tr><td>Favorite Food:</td><td>Momo</td></tr>
+          <tr><td>Favorite Quote:</td><td>"Strive for progress, not perfection."</td></tr>
+          <tr><td>Favorite Food:</td><td>Momo</td></tr>
           <tr><td>Favorite Movie:</td><td>Avengers</td></tr>
         </tbody>
       </table>
@@ -32,24 +32,22 @@
 
     <!-- Gallery Section -->
     <section class="media-gallery">
-  <h2>Gallery</h2>
-  <div class="gallery-content">
-   <img src="Saksham Upreti.png" alt="Saksham Upreti" width="250">
-    <iframe width="320" height="180" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Favorite Video" frameborder="0" allowfullscreen></iframe><br><br>
- <audio controls>
-  <source src="saksham-intro.m4a" type="audio/mp4">
-  Your browser does not support the audio element.
-</audio>
-
-  </div>
-</section>
-
+      <h2>Gallery</h2>
+      <div class="gallery-content">
+        <img src="Saksham Upreti.png" alt="Saksham Upreti" width="250">
+        <iframe width="320" height="180" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Favorite Video" frameborder="0" allowfullscreen></iframe><br><br>
+        <audio controls>
+          <source src="saksham-intro.m4a" type="audio/mp4">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </section>
   </main>
 
   <!-- Feedback Form -->
   <section class="feedback">
     <h2>Leave Feedback</h2>
-    <form action="#" method="POST">
+    <form id="feedback-form">
       <fieldset>
         <legend>Your Info</legend>
         <label>Name: <input type="text" name="name" required></label><br>
@@ -71,8 +69,26 @@
       </label><br>
 
       <label><input type="checkbox" name="subscribe"> Join mailing list</label><br>
+
       <button type="submit">Send Feedback</button>
     </form>
+
+    <!-- Hidden Thank You Message -->
+    <p id="thank-you-message" style="display:none; font-weight:bold; color:green; margin-top: 20px;">
+      ✅ Thank you for your feedback!
+    </p>
   </section>
+
+  <!-- JS to Handle Thank You Message -->
+  <script>
+    const form = document.getElementById('feedback-form');
+    const message = document.getElementById('thank-you-message');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Stop default submission
+      message.style.display = 'block'; // Show thank you message
+      form.reset(); // Clear form fields
+    });
+  </script>
 </body>
 </html>

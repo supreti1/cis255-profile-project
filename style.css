@@ -70,6 +70,17 @@ button:hover {
   background-color: #444;
 }
 
+.media-gallery {
+  text-align: center;
+}
+
+.gallery-content img,
+.gallery-content iframe,
+.gallery-content audio {
+  margin-bottom: 15px;
+  max-width: 90%;
+}
+
 @media (max-width: 600px) {
   .grid-container {
     grid-template-columns: 1fr;
